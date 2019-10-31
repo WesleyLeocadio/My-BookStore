@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">My BookStore</string>
+    <string name="author">Author</string>
+    <string name="ano">ano</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="left">Left</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="year">Year:</string>
+    <string name="note">Note:</string>
+    <string name="ator">Ator</string>
+</resources>
