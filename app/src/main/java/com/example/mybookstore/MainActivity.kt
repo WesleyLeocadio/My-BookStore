@@ -8,6 +8,8 @@ import com.example.mybookstore.list_view.ListViewActivity
 import com.example.mybookstore.recycler_view.RecyclerViewActivity
 import com.example.mybookstore.register.RegisterActivity
 import com.example.mybookstore.search_books.SearchBooksActivity
+import com.example.mybookstore.view_pager.PageViewAdapter
+import com.example.mybookstore.view_pager.ViewPagerActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -39,6 +41,13 @@ class MainActivity : AppCompatActivity() {
 
         btnRecycler.setOnClickListener {
             startActivity(Intent(this, RecyclerViewActivity::class.java))
+
+        }
+
+
+
+        btnPageView.setOnClickListener {
+            startActivity(Intent(this, ViewPagerActivity::class.java))
 
         }
 

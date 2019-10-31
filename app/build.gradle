@@ -48,5 +48,9 @@ dependencies {
     implementation 'com.android.support:design:29.0.1'
     implementation 'com.android.support:recyclerview-v7:29.0.1'
     implementation 'com.android.support:cardview-v7:29.0.1'
+    //Se o ViewPager não puder ser instanciado é necessário
+    //adicionar uma biblioteca ao build.grade.
+    implementation 'com.android.support:appcompat-v7:29.0.1'
+
 
 }
