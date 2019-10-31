@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".auto_complete_textview.AutoCompleteTextViewActivity"></activity>
+        <activity android:name=".recycler_view.RecyclerViewActivity"></activity>
+        <activity android:name=".list_view.ListViewActivity" />
+        <activity android:name=".auto_complete_textview.AutoCompleteTextViewActivity" />
         <activity android:name=".search_books.SearchBooksActivity" />
         <activity android:name=".register.RegisterActivity" />
         <activity android:name=".MainActivity">

@@ -27,5 +27,17 @@
         android:id="@+id/btnAutoComplete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="  Search " />
+        android:text="  AutoComplete " />
+
+    <Button
+        android:id="@+id/btnListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  ListView " />
+
+    <Button
+        android:id="@+id/btnRecycler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  Recycler " />
 </LinearLayout>

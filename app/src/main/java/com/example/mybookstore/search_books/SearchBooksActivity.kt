@@ -14,19 +14,22 @@ class SearchBooksActivity : AppCompatActivity() {
     val db: AppDatabase by lazy {
         Room.databaseBuilder(
             this,
-            AppDatabase::class.java, "bd-wesley")
+            AppDatabase::class.java, "bd-wesley"
+        )
             .allowMainThreadQueries()
             .build()
     }
 
     var books = ArrayList<Book>()
     var cont = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search_books)
+
         setBooks()
 
-        newBook()
+
 
         btnDireita.setOnClickListener {
             cont++
@@ -38,7 +41,6 @@ class SearchBooksActivity : AppCompatActivity() {
             newBook()
         }
         btnDelete.setOnClickListener {
-            Log.i("cont","${books.get(cont)}")
             db.bookDao().deletar(books.get(cont))
             setBooks()
 
@@ -47,11 +49,11 @@ class SearchBooksActivity : AppCompatActivity() {
 
 
     }
-    fun setBooks(){
+
+    fun setBooks() {
         books.clear()
         db.bookDao().listAll().forEach {
             books.add(it)
-
         }
         newBook()
 
@@ -61,23 +63,27 @@ class SearchBooksActivity : AppCompatActivity() {
         if (books.size > 0) {
             textTitle.text = books.get(cont).name
             textAutor.text = books.get(cont).author
-            textYear.text=books.get(cont).year.toString()
+            textYear.text = books.get(cont).year.toString()
             textNote.text = books.get(cont).note.toString()
-            btnDireita.visibility = View.VISIBLE
-            btnEsquerda.visibility = View.VISIBLE
-            btnDelete.visibility= View.VISIBLE
-            btnEdit.visibility= View.VISIBLE
-
+            visible(true)
             checkLenght()
         } else {
-            btnDireita.visibility = View.INVISIBLE
-            btnEsquerda.visibility = View.INVISIBLE
-            btnDelete.visibility= View.INVISIBLE
-            btnEdit.visibility= View.INVISIBLE
+            visible(false)
             clear()
 
         }
     }
+
+    fun visible(b: Boolean) {
+        var x: Int
+        if (b) x = View.VISIBLE else x = View.INVISIBLE
+        btnDireita.visibility = x
+        btnEsquerda.visibility = x
+        btnDelete.visibility = x
+        btnEdit.visibility = x
+
+    }
+
     fun checkLenght() {
         if (cont + 1 >= books.size) {
             btnDireita.visibility = View.INVISIBLE
@@ -86,11 +92,12 @@ class SearchBooksActivity : AppCompatActivity() {
         }
 
 
-        if (cont - 1 < 0 ) {
+        if (cont - 1 < 0) {
             btnEsquerda.visibility = View.INVISIBLE
         }
     }
-    fun clear(){
+
+    fun clear() {
         textTitle.text = ""
         textAutor.text = ""
         textYear.text = ""

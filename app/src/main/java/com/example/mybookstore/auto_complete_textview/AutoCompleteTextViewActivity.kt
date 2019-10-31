@@ -19,13 +19,14 @@ class AutoCompleteTextViewActivity : AppCompatActivity() {
             .allowMainThreadQueries()
             .build()
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_auto_complete_text_view)
         var livros = db.bookDao().listAll()
 
-        var titulos = Array<String>(livros.size, {i -> i.toString()})
-        for (i in 0 until  livros.size){
+        var titulos = Array(livros.size, { i -> i.toString() })
+        for (i in 0 until livros.size) {
             titulos[i] = livros[i].name
         }
 
@@ -33,17 +34,18 @@ class AutoCompleteTextViewActivity : AppCompatActivity() {
         var livroToListAdapter = ArrayAdapter<String>(
             this,
             android.R.layout.simple_expandable_list_item_1,
-            titulos)
+            titulos
+        )
 
         autocomplete.setAdapter(livroToListAdapter)
 
         autocomplete.setOnItemClickListener { adapterView, view, i, l ->
             var selected = adapterView.getItemAtPosition(i)
-            var livro=db.bookDao().findByName(selected.toString())
+            var livro = db.bookDao().findByName(selected.toString())
             textTitle.text = livro.name
             textAtor.text = livro.author
             textYear.text = livro.year.toString()
-            nota.rating= livro.note
+            nota.rating = livro.note
         }
     }
 }
