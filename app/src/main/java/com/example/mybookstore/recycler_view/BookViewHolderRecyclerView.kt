@@ -21,6 +21,10 @@ class BookViewHolderRecyclerView  (v: View) : RecyclerView.ViewHolder(v){
         autor = v.findViewById(R.id.textInfAutor)
         nota = v.findViewById(R.id.textInfNota)
         img = v.findViewById(R.id.img)
+        img.setOnClickListener {
+            img.setImageResource(R.drawable.livroaberto)
+        }
+
 
     }
 }

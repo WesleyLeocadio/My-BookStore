@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".recycler_view.RecyclerViewActivity"
-    android:background="#000000">
-
+    android:background="#011F27"
+>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"

@@ -23,10 +23,12 @@ class BookAdapterRecyclerView (var c:Context, var books:List<Book>) :RecyclerVie
             holder.img.setImageResource(R.drawable.livrofechado)
         }
 
+
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BookViewHolderRecyclerView {
-        val view = LayoutInflater.from(c).inflate(R.layout.inflater_book_listview, parent, false)
+        val view = LayoutInflater.from(c).inflate(R.layout.inflater_book_cardview, parent, false)
         return BookViewHolderRecyclerView(view)
     }
 
