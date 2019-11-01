@@ -23,6 +23,10 @@ class BookAdapterRecyclerView (var c:Context, var books:List<Book>) :RecyclerVie
             holder.img.setImageResource(R.drawable.livrofechado)
         }
 
+        holder.img.setOnClickListener {
+            bookAtual.lido = true
+            notifyItemChanged(position)
+        }
 
 
     }

@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.mybookstore.auto_complete_textview.AutoCompleteTextViewActivity
+import com.example.mybookstore.grid_view.GridViewActivity
 import com.example.mybookstore.list_view.ListViewActivity
 import com.example.mybookstore.recycler_view.RecyclerViewActivity
 import com.example.mybookstore.register.RegisterActivity
@@ -37,22 +38,26 @@ class MainActivity : AppCompatActivity() {
         btnListView.setOnClickListener {
             startActivity(Intent(this, ListViewActivity::class.java))
 
+
+            btnGridView.setOnClickListener {
+                startActivity(Intent(this, GridViewActivity::class.java))
+
+            }
+
+
+            btnRecycler.setOnClickListener {
+                startActivity(Intent(this, RecyclerViewActivity::class.java))
+
+            }
+
+
+
+            btnPageView.setOnClickListener {
+                startActivity(Intent(this, ViewPagerActivity::class.java))
+
+            }
+
+
         }
-
-        btnRecycler.setOnClickListener {
-            startActivity(Intent(this, RecyclerViewActivity::class.java))
-
-        }
-
-
-
-        btnPageView.setOnClickListener {
-            startActivity(Intent(this, ViewPagerActivity::class.java))
-
-        }
-
-
-
-
     }
 }

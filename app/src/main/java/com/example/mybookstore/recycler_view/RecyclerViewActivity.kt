@@ -30,7 +30,7 @@ class RecyclerViewActivity : AppCompatActivity() {
 
         var livros:MutableList<Book> = db.bookDao().listAll1()
 
-        var adapter = BookAdapterRecyclerView(this, db.bookDao().listAll())
+        var adapter = BookAdapterRecyclerView(this, livros)
 
         recyclerview.adapter=adapter
 
