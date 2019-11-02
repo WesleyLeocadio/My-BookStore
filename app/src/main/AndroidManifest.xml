@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".grid_view.GridViewActivity"></activity>
+        <activity android:name=".swipe_drag_drop.SwipeDragDropActivity"></activity>
+        <activity android:name=".grid_view.GridViewActivity" />
         <activity android:name=".view_pager.ViewPagerActivity" />
         <activity android:name=".recycler_view.RecyclerViewActivity" />
         <activity android:name=".list_view.ListViewActivity" />

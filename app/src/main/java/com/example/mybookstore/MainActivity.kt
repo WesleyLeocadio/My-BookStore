@@ -9,6 +9,7 @@ import com.example.mybookstore.list_view.ListViewActivity
 import com.example.mybookstore.recycler_view.RecyclerViewActivity
 import com.example.mybookstore.register.RegisterActivity
 import com.example.mybookstore.search_books.SearchBooksActivity
+import com.example.mybookstore.swipe_drag_drop.SwipeDragDropActivity
 import com.example.mybookstore.view_pager.PageViewAdapter
 import com.example.mybookstore.view_pager.ViewPagerActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -50,7 +51,10 @@ class MainActivity : AppCompatActivity() {
 
             }
 
+            btnDrapDrop.setOnClickListener {
+                startActivity(Intent(this, SwipeDragDropActivity::class.java))
 
+            }
 
             btnPageView.setOnClickListener {
                 startActivity(Intent(this, ViewPagerActivity::class.java))
